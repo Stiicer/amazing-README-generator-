@@ -1,0 +1,23 @@
+{
+  "name": "amazing-readme-generator-",
+  "version": "1.0.0",
+  "description": "Generate perfect README.md files!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stiicer/amazing-README-generator-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stiicer/amazing-README-generator-/issues"
+  },
+  "homepage": "https://github.com/Stiicer/amazing-README-generator-#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
