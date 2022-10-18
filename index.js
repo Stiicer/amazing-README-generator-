@@ -1,5 +1,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
+const markdown = require("./generateMarkdown.js");
+
 
 
 
@@ -63,8 +65,9 @@ console.log("You have successfully made a great README file!");
 function init() {
  inquirer.prompt(questions)
     .then(userInput => {
-        return console.log(userInput);
+        writeToFile("README.md", markdown.generateMarkdown(userInput))
     });
+
 
 }
 
