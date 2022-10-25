@@ -1,6 +1,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const markdown = require("./generateMarkdown.js");
+const markdown = require("./utils/generateMarkdown.js");
 
 
 
@@ -52,7 +52,7 @@ const questions = [{
 
 //will write a new file
 function writeToFile(fileName, data) {
-    fs.writeToFile("README.md", data, err => { 
+    fs.writeFile(fileName, data, err => { 
     if(err){
 return console.log(err);
 }
@@ -65,9 +65,9 @@ console.log("You have successfully made a great README file!");
 function init() {
  inquirer.prompt(questions)
     .then(userInput => {
-        writeToFile("README.md", markdown.generateMarkdown(userInput))
+        const mark = markdown(userInput);
+        writeToFile("./utils/README.md", mark)
     });
-
 
 }
 
